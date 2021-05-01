@@ -1,0 +1,4 @@
+npm run generate
+    - dist (hay que indicar a firebase que coja de aquí)
+firebase deploy
+Aplicación PWA para el icono
