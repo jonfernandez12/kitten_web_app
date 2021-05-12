@@ -4,6 +4,7 @@
 
 <script>
 export default{
+  loading: false,
   head() {
     return {
       title: 'Application Next Posts | Home',
