@@ -5,6 +5,7 @@ import {Config}  from '~/services/config'
 import 'firebase/auth'
 import 'firebase/firestore'
 import 'firebase/storage'
+import 'firebase/database'
 import  {firebaseConfig}  from './config'
 
 if (!firebase.apps.length) {
@@ -20,6 +21,7 @@ export const auth = firebase.auth()
 
 export const db = firebase.firestore()
 export const storage = firebase.storage()
+export const firebase1 = firebase
 
 function getCurrentUserPromise(auth) {
   return new Promise((resolve, reject) => {

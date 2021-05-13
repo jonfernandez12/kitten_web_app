@@ -10,10 +10,22 @@ export default {
         }
     },
     methods: {
-        like: function (message, event) {
+        /*like: async function (message, event) {
             
             this.counter = this.counter+1
-        }
+        },*/
+        addPost(event) {
+
+            this.counter = this.counter+1
+            this.$store.dispatch('addPost', {
+                id: this.id,
+                likes: this.counter,
+            })
+            }
+        
+    },
+    created() {
+            this.$store.dispatch('initRealtimeListeners')
     }
 }
 </script>
@@ -23,7 +35,7 @@ export default {
             <p>{{id}}</p>
             <img v-bind:src="img"/>
             <p>{{likes}}</p>  
-            <button v-on:click="like('Form cannot be submitted yet.', $event)">
+            <button v-on:click="addPost('Form cannot be submitted yet.', $event)"> <!--ponia like-->
              Like
             </button>
             <td v-text="counter"></td>
