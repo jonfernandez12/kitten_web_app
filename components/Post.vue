@@ -1,18 +1,39 @@
+
+<script>
+
+export default {
+    name:"Post",
+    props:['id','img','likes'],
+    data () {
+     return {
+       counter : 0,
+        }
+    },
+    methods: {
+        like: function (message, event) {
+            
+            this.counter = this.counter+1
+        }
+    }
+}
+</script>
+
 <template>
-    <nuxt-link :to="'/posts/' + id">
-        <div class="post">
-            <p>{{id}}. {{name}}</p>
+        <div id="post" class="post">
+            <p>{{id}}</p>
+            <img v-bind:src="img"/>
+            <p>{{likes}}</p>  
+            <button v-on:click="like('Form cannot be submitted yet.', $event)">
+             Like
+            </button>
+            <td v-text="counter"></td>
         </div>
-    </nuxt-link>
 
 </template>
 
-<script>
-export default {
-    name:"Post",
-    props:['id','name']
-}
-</script>
+
+
+
 
 <style>
     .post{

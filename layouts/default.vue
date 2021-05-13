@@ -112,8 +112,23 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'Users conectados',
+          to: '/users'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Posts',
+          to: '/posts'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Login',
+          to: '/login'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Log Out',
+          to: '/logout'
         }
       ],
       miniVariant: false,

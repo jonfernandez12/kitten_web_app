@@ -19,7 +19,7 @@ export default {
        }
     },
     async created(){
-        const res = await axios.get('https://jsonplaceholder.typicode.com/posts/' + this.$route.params.id)
+        const res = await axios.get('https://source.unsplash.com/random/' + this.$route.params.id)
         this.post = res.data;
     }
 }
