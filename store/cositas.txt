@@ -1,0 +1,5 @@
+
+lo del increment en store
+post de pages init y add 
+post de components upgrade
+store flag y comprobar

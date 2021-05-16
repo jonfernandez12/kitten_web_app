@@ -18,6 +18,22 @@ export const estado = {
   
 }
 
+export const id = {
+  idd(){
+    var nombre = auth.currentUser.uid
+    return nombre
+  }
+  
+}
+
+export const email = {
+  emaill(){
+    var nombre = auth.currentUser.email
+    return nombre
+  }
+  
+}
+
 export const getters = {
   logged: (state, getters, rootState) => state.user.uid !== null
 }

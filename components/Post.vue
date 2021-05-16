@@ -9,19 +9,26 @@ export default {
        counter : 0,
         }
     },
+    computed: {
+       ...mapState('store', ['posts']),
+       
+
+     },
     methods: {
+        ...mapActions('store', ['initRealtimeListeners','addPost','updatePost']),
         /*like: async function (message, event) {
             
             this.counter = this.counter+1
         },*/
-        addPost(event) {
-
+        /*addPost(event) {
+            console.log(store)
             this.counter = this.counter+1
             this.$store.dispatch('addPost', {
                 id: this.id,
                 likes: this.counter,
             })
             }
+        */
         
     },
     created() {

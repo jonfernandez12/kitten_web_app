@@ -1,11 +1,13 @@
 
 <script>
-import {estado} from '../../store/user'
+import {estado, id, email} from '../../store/user'
 
 export default {
   name: 'app',
   data () {
     return {
+      id : id.idd(),
+      email : email.emaill(),
       nombre : estado.estadoo(),//variable nombre que hacer referencia al valor del input
     }
   }/*,
@@ -31,8 +33,16 @@ export default {
 <template>
   <v-card>
     <v-card-title>
-      Usuario: 
-      <td v-text="nombre"></td>
+      <ul>
+        <li><p> Id: </p> 
+      <td v-text="id"></td></li>
+      <br>
+        <li><p>Usuario:</p> 
+      <td v-text="nombre"></td></li>
+      <br> 
+        <li><p>Email:</p> 
+      <td v-text="email"></td></li>
+      </ul>
     </v-card-title>
   </v-card>
 </template>
