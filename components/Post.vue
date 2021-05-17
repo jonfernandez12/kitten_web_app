@@ -15,7 +15,7 @@ export default {
 
      },
     methods: {
-        ...mapActions('store', ['initRealtimeListeners','updatePost']),
+        ...mapActions('store', ['updatePost']),
         /*like: async function (message, event) {
             
             this.counter = this.counter+1
@@ -35,11 +35,11 @@ export default {
 </script>
 
 <template>
-        <div id="post" class="post">
+        <div>
             <p>{{id}}</p>
             <img v-bind:src="img"/>
             <p>{{likes}}</p>  
-            <button v-on:click="initRealtimeListeners"> <!--ponia like-->
+            <button v-on:click="updatePost({id, likes})"> <!--ponia like-->
              Like
             </button>
             <td v-text="counter"></td>

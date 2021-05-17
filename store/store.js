@@ -1,39 +1,39 @@
 
-import {db} from '../services/fireinit'
+import {db, firebase1} from '../services/fireinit'
 
 import { mapGetters, mapState } from 'vuex'
 
 
 export const state = () => ({
     posts: [],
+    listening: false
   })
 
 export const  mutations = {
-    addPost(state, post) {
-      state.posts.push({
-        id: post.id,
-        likes: post.likes,
-      })
+    updatePosts(state, posts){
+      state.posts = posts
     },
-    updatePost(state, post) {
-        const index = state.posts.findIndex(item => item.id == post.id)
-        state.posts.splice(index, 1, {
-        'id': post.id,
-        'likes': post.likes,
-        })
+    setListening(state, listening) {
+      state.listening = listening
     }
 }
 
 
   export const actions = {
+    
     initRealtimeListeners(context) {
+      if (!context.state.listening) {
+        context.commit('setListening', true)
+      
       //console.log(db.collection('likes'))
-      db.collection("likes").onSnapshot().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data().likes}`);
+        db.collection("likes").onSnapshot((querySnapshot) => {
+  
+         const datos = querySnapshot.docs.map(doc => ({ id:doc.id, ...doc.data()}) )
+       
+          context.commit('updatePosts',datos)         
         });
-    });
-  },
+     }
+     },
       //.onSnapshot((querySnapshot) => {
       //  querySnapshot.docChanges().forEach(change => {
       //    context.commit('updatePost', {
@@ -49,9 +49,10 @@ export const  mutations = {
     //  })
     //},
     updatePost(context, post) {
-      db.collection('likes').doc(post.id).set({
-        likes: post.likes
-        // timestamp: post.timestamp,
-      })
-    },
+      
+      db.collection('likes').doc(post.id).update({"likes" : firebase1.firestore.FieldValue.increment(1)})
+    
+    
+    }
   }
+
