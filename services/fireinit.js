@@ -21,7 +21,6 @@ export const auth = firebase.auth()
 
 export const db = firebase.firestore()
 export const storage = firebase.storage()
-export const firebase1 = firebase
 
 function getCurrentUserPromise(auth) {
   return new Promise((resolve, reject) => {

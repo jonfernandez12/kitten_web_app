@@ -1,6 +1,6 @@
 
 <script>
-
+import { mapGetters, mapState, mapActions } from 'vuex'
 export default {
     name:"Post",
     props:['id','img','likes'],
@@ -15,7 +15,7 @@ export default {
 
      },
     methods: {
-        ...mapActions('store', ['initRealtimeListeners','addPost','updatePost']),
+        ...mapActions('store', ['initRealtimeListeners','updatePost']),
         /*like: async function (message, event) {
             
             this.counter = this.counter+1
@@ -30,9 +30,6 @@ export default {
             }
         */
         
-    },
-    created() {
-            this.$store.dispatch('initRealtimeListeners')
     }
 }
 </script>
@@ -42,7 +39,7 @@ export default {
             <p>{{id}}</p>
             <img v-bind:src="img"/>
             <p>{{likes}}</p>  
-            <button v-on:click="addPost('Form cannot be submitted yet.', $event)"> <!--ponia like-->
+            <button v-on:click="initRealtimeListeners"> <!--ponia like-->
              Like
             </button>
             <td v-text="counter"></td>
