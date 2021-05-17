@@ -21,7 +21,6 @@ export default {
       immediate: true,
       handler(logged) {
         if (logged) this.next()
-        
       }
     }
   },
@@ -49,7 +48,7 @@ export default {
         // tosUrl and privacyPolicyUrl accept either url string or a callback
         // function.
         // Terms of service url/callback.
-        //tosUrl: '/posts',
+        tosUrl: '/posts',
         // Privacy policy url/callback.
         // privacyPolicyUrl: function() {
         //  window.location.assign('<your-privacy-policy-url>')

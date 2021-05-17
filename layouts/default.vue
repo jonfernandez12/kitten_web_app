@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navigation/>
     <div class="content">
     <v-app dark>
       <v-navigation-drawer
@@ -93,7 +94,11 @@
 </template>
 
 <script>
+import Navigation from '../components/Navigation'
 export default {
+  components:{
+    Navigation
+  },
   data () {
     return {
       clipped: false,
@@ -107,18 +112,23 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        },
-        {
-          icon: 'mdi-chart-bubble',
           title: 'Users conectados',
           to: '/users'
         },
         {
           icon: 'mdi-chart-bubble',
+          title: 'Posts',
+          to: '/posts'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Login',
+          to: '/login'
+        },
+        {
+          icon: 'mdi-chart-bubble',
           title: 'Log Out',
-          to: '/loggout'
+          to: '/logout'
         }
       ],
       miniVariant: false,

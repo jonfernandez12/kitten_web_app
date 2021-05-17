@@ -4,8 +4,9 @@
         <Post 
             v-for="post of posts"
             v-bind:key="post.id"
-            :name="post.title" 
             :id="post.id"
+            :img="post.img"
+            :likes="post.likes"
             />
     </div>
 </template>
@@ -13,6 +14,7 @@
 <script>
 import axios from 'axios'
 import Post from '../../components/Post'
+import postData from "../../gatitos.json";
 
 export default {
     components:{
@@ -20,17 +22,8 @@ export default {
     },
     data(){
         return{
-            posts:[]
+            posts:postData
         }
-    },
-    async created(){
-        try{
-            const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
-            this.posts = res.data;
-        }catch(error){
-            console.log(error)
-        }
-        
     }
 }
 </script>

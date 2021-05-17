@@ -6,10 +6,33 @@ export const state = () => ({
     uid: null, // no null si está logueado
     email: null
   },
-  afterLogin: '/posts', // donde dirigirse una vez complete el login (si accedió y no tenía permiso)
-  listeningAuth: false,
-  logout:'/login'
+  afterLogin: '/', // donde dirigirse una vez complete el login (si accedió y no tenía permiso)
+  listeningAuth: false
 })
+
+export const estado = {
+  estadoo(){
+    var nombre = auth.currentUser.displayName
+    return nombre
+  }
+  
+}
+
+export const id = {
+  idd(){
+    var nombre = auth.currentUser.uid
+    return nombre
+  }
+  
+}
+
+export const email = {
+  emaill(){
+    var nombre = auth.currentUser.email
+    return nombre
+  }
+  
+}
 
 export const getters = {
   logged: (state, getters, rootState) => state.user.uid !== null

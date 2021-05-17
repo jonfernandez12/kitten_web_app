@@ -8,15 +8,11 @@ import 'firebase/storage'
 import  {firebaseConfig}  from './config'
 
 if (!firebase.apps.length) {
-  console.log("Holaaaaa")
-  console.log(firebaseConfig)
   firebase.initializeApp(firebaseConfig)
   
 } else {
-  console.log("hola")
   firebase.app() // if already initialized, use that one
 }
-
 export const GoogleProvider = new firebase.auth.GoogleAuthProvider()
 
 export const auth = firebase.auth()

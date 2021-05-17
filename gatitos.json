@@ -1,0 +1,102 @@
+[
+    {
+        "id": 0,
+        "img": "/image_name0.gif",
+        "likes": 0
+    },
+    {
+        "id": 1,
+        "img": "/image_name0.jpg",
+        "likes": 0
+    },
+    {
+        "id": 2,
+        "img": "/image_name1.gif",
+        "likes": 0
+    },
+    {
+        "id": 3,
+        "img": "/image_name1.jpg",
+        "likes": 0
+    },
+    {
+        "id": 4,
+        "img": "/image_name2.gif",
+        "likes": 0
+    },
+    {
+        "id": 5,
+        "img": "/image_name2.jpg",
+        "likes": 0
+    },
+    {
+        "id": 6,
+        "img": "/image_name3.gif",
+        "likes": 0
+    },
+    {
+        "id": 7,
+        "img": "/image_name3.jpg",
+        "likes": 0
+    },
+    {
+        "id": 8,
+        "img": "/image_name4.gif",
+        "likes": 0
+    },
+    {
+        "id": 9,
+        "img": "/image_name4.jpg",
+        "likes": 0
+    },
+    {
+        "id": 10,
+        "img": "/image_name5.gif",
+        "likes": 0
+    },
+    {
+        "id": 11,
+        "img": "/image_name5.jpg",
+        "likes": 0
+    },
+    {
+        "id": 12,
+        "img": "/image_name6.gif",
+        "likes": 0
+    },
+    {
+        "id": 13,
+        "img": "/image_name6.jpg",
+        "likes": 0
+    },
+    {
+        "id": 14,
+        "img": "/image_name7.gif",
+        "likes": 0
+    },
+    {
+        "id": 15,
+        "img": "/image_name7.jpg",
+        "likes": 0
+    },
+    {
+        "id": 16,
+        "img": "/image_name8.gif",
+        "likes": 0
+    },
+    {
+        "id": 17,
+        "img": "/image_name8.jpg",
+        "likes": 0
+    },
+    {
+        "id": 18,
+        "img": "/image_name9.gif",
+        "likes": 0
+    },
+    {
+        "id": 19,
+        "img": "/image_name9.jpg",
+        "likes": 0
+    }
+]
