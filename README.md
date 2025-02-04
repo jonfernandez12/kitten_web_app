@@ -1,4 +1,16 @@
-# NuxtApp
+# Kitten Social Media
+
+A small web application as a PoC for [Nuxt](https://nuxt.com/) 
+(A [Vue](https://vuejs.org/) JavaScript framework). 
+
+We used Google Firebase as a database and deployment tool, 
+please redirect to the following URL to access:
+
+https://mynuxtapp-42dde.firebaseapp.com/posts
+
+The purpose of this application was learn how to handle 
+different threads (users doing actions) on an application 
+deployed in the cloud.
 
 ## Build Setup
 
